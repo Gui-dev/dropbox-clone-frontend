@@ -39,7 +39,7 @@ export default class Box extends Component {
   subscribeToNewFiles = () => {
 
     const { id } = this.props.match.params 
-    const io = socket( 'http://192.168.0.105:3333' )
+    const io = socket( 'https://dropboxclonebackend.herokuapp.com' )
 
     io.emit( 'connectRoom', id )
     io.on( 'file', data => {
